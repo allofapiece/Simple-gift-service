@@ -18,6 +18,11 @@ public class ChocolateFileDAO implements FileDAO {
         return null;
     }
 
+    @Override
+    public Chocolate find(int id) {
+        return null;
+    }
+
     public List<Chocolate> getChocolates() {
         return chocolates;
     }

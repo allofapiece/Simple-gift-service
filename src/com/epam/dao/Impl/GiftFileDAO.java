@@ -19,6 +19,11 @@ public class GiftFileDAO implements FileDAO {
         return null;
     }
 
+    @Override
+    public Gift find(int id) {
+        return null;
+    }
+
     public List<Gift> getGifts() {
         return gifts;
     }

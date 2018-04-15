@@ -18,6 +18,11 @@ public class SweetMeatFileDAO implements FileDAO {
         return null;
     }
 
+    @Override
+    public SweetMeat find(int id) {
+        return null;
+    }
+
     public List<SweetMeat> getSweetMeats() {
         return sweetMeats;
     }

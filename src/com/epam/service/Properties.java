@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Properties {
 
     //The main property file path. Change, if it is different
-    private String mainPropertiesFilePath = "../property/property.txt";
+    private String mainPropertiesFilePath = "D:\\Programming\\Projects\\Java\\task1\\src\\com\\epam\\property\\property.txt";
     private String propertiesFilePath;
 
     private File mainPropertiesFile;
@@ -62,8 +62,8 @@ public class Properties {
     }
 
     public String getMainProperty(String property){
-        if(this.properties.isEmpty()){
-            this.properties = this.loadProperties();
+        if(this.mainProperties.isEmpty()){
+            this.mainProperties = this.loadMainProperties();
         }
         property = property.toLowerCase();
 
