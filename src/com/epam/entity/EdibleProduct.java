@@ -2,7 +2,6 @@ package com.epam.entity;
 
 public class EdibleProduct extends Product {
     private float sugar;
-
     private String name;
 
     public float getSugar() {

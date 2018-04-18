@@ -1,17 +1,23 @@
 package com.epam.dao.Impl;
 
 import com.epam.dao.FileDAO;
-import com.epam.entity.Chocolate;
 import com.epam.entity.Gift;
+import com.epam.entity.Sweet;
+import com.epam.exc.EntityNotFoundException;
+import com.epam.service.Properties;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GiftFileDAO implements FileDAO {
     private List<Gift> gifts;
 
-    public GiftFileDAO(){
-        this.gifts = new ArrayList<Gift>();
+    public GiftFileDAO() {
+        this.gifts = new ArrayList<>();
     }
 
     @Override
@@ -20,7 +26,40 @@ public class GiftFileDAO implements FileDAO {
     }
 
     @Override
-    public Gift find(int id) {
+    public Gift find(int id) throws EntityNotFoundException {
+        Properties properties = new Properties();
+        Gift gift = null;
+
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.gift"))));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                gift = new Gift();
+                SweetFileDAO sweetFileDAO = new SweetFileDAO();
+
+                gift.setId(Integer.parseInt(line));
+
+                line = bufferedReader.readLine();
+
+                if (gift.getId() == id) {
+                    String[] content = line.split(" ");
+                    for (String sweetId : content) {
+                        Sweet sweet = sweetFileDAO.find(Integer.parseInt(sweetId));
+                        gift.addSweet(sweet);
+                    }
+
+                    return gift;
+                }
+
+                gift = null;
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        if (gift == null) {
+            throw new EntityNotFoundException("Not found gift with id = " + id);
+        }
         return null;
     }
 

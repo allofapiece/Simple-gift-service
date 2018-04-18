@@ -1,4 +1,2 @@
-dao.candy=D:\Programming\Projects\Java\task1\src\com\epam\property\candies.txt
-dao.chocolate=D:\Programming\Projects\Java\task1\src\com\epam\property\chocolates.txt
-dao.sweatmeat=D:\Programming\Projects\Java\task1\src\com\epam\property\sweatmeats.txt
-dao.gift=D:\Programming\Projects\Java\task1\src\com\epam\property\gifts.txt
+dao.sweet=src/com/epam/resources/sweets.txt
+dao.gift=src/com/epam/resources/gifts.txt

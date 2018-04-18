@@ -6,10 +6,14 @@ import com.epam.service.parser.TextPropertyParser;
 import java.io.File;
 import java.util.HashMap;
 
+/**
+ * This class provides access to application properties
+ * Attention. File path with main properties described in
+ * mainPropertyFilePath variable.
+ */
 public class Properties {
 
-    //The main property file path. Change, if it is different
-    private String mainPropertiesFilePath = "D:\\Programming\\Projects\\Java\\task1\\src\\com\\epam\\property\\property.txt";
+    private String mainPropertiesFilePath = "src\\com\\epam\\property\\property.txt"; //The main property file path. Change, if it is different
     private String propertiesFilePath;
 
     private File mainPropertiesFile;
@@ -18,42 +22,42 @@ public class Properties {
     private HashMap<String, String> mainProperties;
     private HashMap<String, String> properties;
 
-    public Properties(){
+    public Properties() {
         initMainProperties(this.mainPropertiesFilePath);
     }
 
-    public Properties(String mainPropertiesFilePath){
+    public Properties(String mainPropertiesFilePath) {
         this.setMainPropertiesFilePath(mainPropertiesFilePath);
 
         initMainProperties(mainPropertiesFilePath);
     }
 
-    public void load(String propertyFilePath){
+    public void load(String propertyFilePath) {
         initProperties(propertyFilePath);
     }
 
-    private HashMap<String, String> loadMainProperties(){
+    private HashMap<String, String> loadMainProperties() {
         TextPropertyParser textPropertyParser = new TextPropertyParser();
         mainProperties = textPropertyParser.parse(this.mainPropertiesFilePath);
 
         return this.mainProperties;
     }
 
-    private HashMap<String, String> loadProperties(){
+    private HashMap<String, String> loadProperties() {
         PropertyParserInterface textPropertyParser = new TextPropertyParser();
         properties = textPropertyParser.parse(this.propertiesFilePath);
 
         return this.properties;
     }
 
-    private File initMainProperties(String path){
+    private File initMainProperties(String path) {
         this.mainProperties = new HashMap<>();
         this.mainPropertiesFile = new File(path);
 
         return this.mainPropertiesFile;
     }
 
-    private File initProperties(String path){
+    private File initProperties(String path) {
         this.properties = new HashMap<>();
         this.propertyFile = new File(path);
         this.propertiesFilePath = path;
@@ -61,8 +65,8 @@ public class Properties {
         return this.propertyFile;
     }
 
-    public String getMainProperty(String property){
-        if(this.mainProperties.isEmpty()){
+    public String getMainProperty(String property) {
+        if (this.mainProperties.isEmpty()) {
             this.mainProperties = this.loadMainProperties();
         }
         property = property.toLowerCase();
@@ -70,8 +74,8 @@ public class Properties {
         return this.mainProperties.get(property);
     }
 
-    public String getProperty(String property){
-        if(this.properties.isEmpty()){
+    public String getProperty(String property) {
+        if (this.properties.isEmpty()) {
             this.properties = this.loadProperties();
         }
         property = property.toLowerCase();

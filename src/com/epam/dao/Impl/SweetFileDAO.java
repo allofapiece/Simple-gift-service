@@ -1,76 +1,63 @@
 package com.epam.dao.Impl;
 
 import com.epam.dao.FileDAO;
-import com.epam.entity.Candy;
+import com.epam.entity.Sweet;
 import com.epam.exc.EntityNotFoundException;
 import com.epam.service.Properties;
+import com.epam.service.reader.SweetFileReader;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CandyFileDAO implements FileDAO {
+public class SweetFileDAO implements FileDAO {
+    private SweetFileReader sweetFileReader;
 
-    private File file;
-
-    public CandyFileDAO(){
+    public SweetFileDAO() {
+        /*Dependency injection*/
+        this.sweetFileReader = new SweetFileReader();
     }
 
     @Override
-    public List<Candy> findAll() {
+    public List<Sweet> findAll() {
         Properties properties = new Properties();
-        List<Candy> candies = new ArrayList<>();
-
-        try{
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.candy"))));
-            String line;
-            Candy candy;
-            while ((line = bufferedReader.readLine()) != null){
-                candy = new Candy();
-
-                candy.setId(Integer.parseInt(line));
-                candy.setName(bufferedReader.readLine());
-                candy.setWeight(Float.parseFloat(bufferedReader.readLine()));
-                candy.setSugar(Float.parseFloat(bufferedReader.readLine()));
-
-                candies.add(candy);
-            }
-        } catch (IOException ex){
-            ex.printStackTrace();
-        }
-        return candies;
-    }
-
-    public Candy find(int id) throws EntityNotFoundException{
-        Properties properties = new Properties();
-        List<Candy> candies = new ArrayList<>();
-        Candy candy = null;
+        List<Sweet> sweets = new ArrayList<>();
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.candy"))));
-            String line;
-            while ((line = bufferedReader.readLine()) != null){
-                candy = new Candy();
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.sweet"))));
+            Sweet sweet;
+            while (bufferedReader.ready()) {
+                sweet = this.sweetFileReader.readOne(bufferedReader);
+                sweets.add(sweet);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return sweets;
+    }
 
-                candy.setId(Integer.parseInt(line));
-                candy.setName(bufferedReader.readLine());
-                candy.setWeight(Float.parseFloat(bufferedReader.readLine()));
-                candy.setSugar(Float.parseFloat(bufferedReader.readLine()));
+    public Sweet find(int id) throws EntityNotFoundException {
+        Properties properties = new Properties();
+        Sweet sweet = null;
 
-                if(candy.getId() == id){
-                    return candy;
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.sweet"))));
+            while (bufferedReader.ready()) {
+                sweet = this.sweetFileReader.readOne(bufferedReader);
+                if (sweet.getId() == id) {
+                    break;
                 }
 
-                candy = null;
+                sweet = null;
             }
-        } catch (IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
 
-        if(candy == null){
-            throw new EntityNotFoundException("Not found candy with id = " + id);
+        if (sweet == null) {
+            throw new EntityNotFoundException("Not found sweet with id = " + id);
         }
 
-        return null;
+        return sweet;
     }
 }
