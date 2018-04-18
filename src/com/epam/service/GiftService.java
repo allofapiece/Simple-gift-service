@@ -9,6 +9,9 @@ import com.epam.entity.Gift;
 import com.epam.entity.Sweet;
 import com.epam.exc.EntityNotFoundException;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class GiftService {
     private FileDAO<Gift> dao;
 
@@ -42,7 +45,6 @@ public class GiftService {
                 break;
 
             default:
-
                 break;
         }
 
@@ -57,5 +59,17 @@ public class GiftService {
         }
 
         return totalWeight;
+    }
+
+    public Set<Sweet> sugarFilter(Gift gift, float min, float max){
+        HashSet<Sweet> filteredSweets = new HashSet<>();
+
+        for (Sweet sweet : gift.getSweets()) {
+            if ((sweet.getSugar() >= min) && (sweet.getSugar() <= max)){
+                filteredSweets.add(sweet);
+            }
+        }
+
+        return filteredSweets;
     }
 }
