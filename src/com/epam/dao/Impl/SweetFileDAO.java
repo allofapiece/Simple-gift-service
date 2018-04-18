@@ -68,7 +68,7 @@ public class CandyFileDAO implements FileDAO {
         }
 
         if(candy == null){
-            throw new EntityNotFoundException("Not found entity with id = " + id);
+            throw new EntityNotFoundException("Not found candy with id = " + id);
         }
 
         return null;
