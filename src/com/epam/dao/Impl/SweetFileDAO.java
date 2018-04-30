@@ -2,8 +2,7 @@ package com.epam.dao.Impl;
 
 import com.epam.dao.FileDAO;
 import com.epam.entity.Sweet;
-import com.epam.exc.EntityNotFoundException;
-import com.epam.service.Properties;
+import com.epam.exception.EntityNotFoundException;
 import com.epam.service.reader.SweetFileReader;
 
 import java.io.*;
@@ -20,11 +19,10 @@ public class SweetFileDAO implements FileDAO {
 
     @Override
     public List<Sweet> findAll() {
-        Properties properties = new Properties();
         List<Sweet> sweets = new ArrayList<>();
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.sweet"))));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("resource/sweets.txt")));
             Sweet sweet;
             while (bufferedReader.ready()) {
                 sweet = this.sweetFileReader.readOne(bufferedReader);
@@ -37,11 +35,10 @@ public class SweetFileDAO implements FileDAO {
     }
 
     public Sweet find(int id) throws EntityNotFoundException {
-        Properties properties = new Properties();
         Sweet sweet = null;
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.sweet"))));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("resource/sweets.txt")));
             while (bufferedReader.ready()) {
                 sweet = this.sweetFileReader.readOne(bufferedReader);
                 if (sweet.getId() == id) {

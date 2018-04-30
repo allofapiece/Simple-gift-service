@@ -1,7 +1,5 @@
 package com.epam.entity;
 
-import com.epam.enums.SweetType;
-
 public class Sweet extends EdibleProduct {
     private SweetType type;
 

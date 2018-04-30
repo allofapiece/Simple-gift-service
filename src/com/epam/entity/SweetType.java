@@ -1,4 +1,4 @@
-package com.epam.enums;
+package com.epam.entity;
 
 public enum SweetType {
     Candy,

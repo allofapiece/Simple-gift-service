@@ -3,8 +3,7 @@ package com.epam.dao.Impl;
 import com.epam.dao.FileDAO;
 import com.epam.entity.Gift;
 import com.epam.entity.Sweet;
-import com.epam.exc.EntityNotFoundException;
-import com.epam.service.Properties;
+import com.epam.exception.EntityNotFoundException;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -27,11 +26,10 @@ public class GiftFileDAO implements FileDAO {
 
     @Override
     public Gift find(int id) throws EntityNotFoundException {
-        Properties properties = new Properties();
         Gift gift = null;
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(properties.getMainProperty("dao.gift"))));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("resource/gifts.txt")));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 gift = new Gift();

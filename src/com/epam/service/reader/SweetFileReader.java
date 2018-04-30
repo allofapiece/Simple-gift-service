@@ -1,7 +1,7 @@
 package com.epam.service.reader;
 
 import com.epam.entity.Sweet;
-import com.epam.enums.SweetType;
+import com.epam.entity.SweetType;
 
 import java.io.BufferedReader;
 import java.io.IOException;

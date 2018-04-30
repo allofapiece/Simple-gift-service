@@ -1,14 +1,13 @@
 package com.epam.service;
 
-import com.epam.comparator.SweetNameComparator;
-import com.epam.comparator.SweetTypeComparator;
 import com.epam.dao.AbstractFactory;
 import com.epam.dao.Factory;
 import com.epam.dao.FileDAO;
 import com.epam.entity.Gift;
 import com.epam.entity.Sweet;
-import com.epam.exc.EntityNotFoundException;
+import com.epam.exception.EntityNotFoundException;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,11 +36,21 @@ public class GiftService {
     public Gift sort(Gift gift, String sortType) {
         switch (sortType) {
             case "name":
-                gift.getSweets().sort(new SweetNameComparator());
+                gift.getSweets().sort(new Comparator<Sweet>() {
+                    @Override
+                    public int compare(Sweet o1, Sweet o2) {
+                        return o1.getName().compareTo(o2.getName());
+                    }
+                });
                 break;
 
             case "sweetType":
-                gift.getSweets().sort(new SweetTypeComparator());
+                gift.getSweets().sort(new Comparator<Sweet>() {
+                    @Override
+                    public int compare(Sweet o1, Sweet o2) {
+                        return o1.getType().compareTo(o2.getType());
+                    }
+                });
                 break;
 
             default:

@@ -1,2 +1,0 @@
-dao.sweet=src/com/epam/resources/sweets.txt
-dao.gift=src/com/epam/resources/gifts.txt

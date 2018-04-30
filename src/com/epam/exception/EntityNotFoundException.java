@@ -1,4 +1,4 @@
-package com.epam.exc;
+package com.epam.exception;
 
 public class EntityNotFoundException extends Exception {
 

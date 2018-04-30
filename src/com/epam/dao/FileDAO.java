@@ -1,6 +1,6 @@
 package com.epam.dao;
 
-import com.epam.exc.EntityNotFoundException;
+import com.epam.exception.EntityNotFoundException;
 
 import java.util.List;
 
