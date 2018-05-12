@@ -6,12 +6,13 @@ import com.epam.dao.FileDAO;
 import com.epam.entity.Gift;
 import com.epam.entity.Sweet;
 import com.epam.exception.EntityNotFoundException;
+import org.apache.log4j.Logger;
 
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 
 public class GiftService {
+    private static final Logger log = Logger.getLogger(GiftService.class);
     private FileDAO<Gift> dao;
 
     public GiftService() {
@@ -26,8 +27,7 @@ public class GiftService {
         try {
             gift = this.dao.find(id);
         } catch (EntityNotFoundException ex) {
-            ex.getMessage();
-            ex.printStackTrace();
+            log.error("EntityNotFoundException thrown", ex);
         }
 
         return gift;
@@ -36,24 +36,17 @@ public class GiftService {
     public Gift sort(Gift gift, String sortType) {
         switch (sortType) {
             case "name":
-                gift.getSweets().sort(new Comparator<Sweet>() {
-                    @Override
-                    public int compare(Sweet o1, Sweet o2) {
-                        return o1.getName().compareTo(o2.getName());
-                    }
-                });
+                gift.getSweets().sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+                log.debug("Sweets is sorted by name");
                 break;
 
             case "sweetType":
-                gift.getSweets().sort(new Comparator<Sweet>() {
-                    @Override
-                    public int compare(Sweet o1, Sweet o2) {
-                        return o1.getType().compareTo(o2.getType());
-                    }
-                });
+                gift.getSweets().sort((o1, o2) -> o1.getType().compareTo(o2.getType()));
+                log.debug("Sweets is sorted by sweet type");
                 break;
 
             default:
+                log.error("This criteria is not exist");
                 break;
         }
 
@@ -66,6 +59,7 @@ public class GiftService {
         for (Sweet sweet : gift.getSweets()) {
             totalWeight += sweet.getWeight();
         }
+        log.debug("Gift weight is calculated");
 
         return totalWeight;
     }
@@ -78,6 +72,9 @@ public class GiftService {
                 filteredSweets.add(sweet);
             }
         }
+        log.debug("Sweets of gift with id = " + gift +
+                " are filtered by min sugar = " + min +
+                " and max sugar = " + max);
 
         return filteredSweets;
     }

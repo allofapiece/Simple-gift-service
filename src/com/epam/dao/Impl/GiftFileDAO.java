@@ -4,28 +4,19 @@ import com.epam.dao.FileDAO;
 import com.epam.entity.Gift;
 import com.epam.entity.Sweet;
 import com.epam.exception.EntityNotFoundException;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class GiftFileDAO implements FileDAO {
-    private List<Gift> gifts;
-
-    public GiftFileDAO() {
-        this.gifts = new ArrayList<>();
-    }
-
-    @Override
-    public List<Gift> findAll() {
-        return null;
-    }
+    private static final Logger log = Logger.getLogger(GiftFileDAO.class);
 
     @Override
     public Gift find(int id) throws EntityNotFoundException {
+        log.debug("Requested gift with id = " + id);
         Gift gift = null;
 
         try {
@@ -46,26 +37,20 @@ public class GiftFileDAO implements FileDAO {
                         gift.addSweet(sweet);
                     }
 
+                    log.debug("Provided gift with id = " + id);
                     return gift;
                 }
 
                 gift = null;
             }
         } catch (IOException ex) {
-            ex.printStackTrace();
+            log.error("IOException thrown", ex);
         }
 
         if (gift == null) {
             throw new EntityNotFoundException("Not found gift with id = " + id);
         }
-        return null;
-    }
 
-    public List<Gift> getGifts() {
-        return gifts;
-    }
-
-    public void setGifts(List<Gift> gifts) {
-        this.gifts = gifts;
+        return gift;
     }
 }

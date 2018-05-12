@@ -1,0 +1,299 @@
+2018-05-12 23:12:46 DEBUG Start:15 - 000000000000000000000000000000000
+2018-05-12 23:12:46 DEBUG Start:41 - Shown
+2018-05-12 23:12:46 INFO  Start:42 - Gift id: 0
+2018-05-12 23:12:46 INFO  Start:43 - ____________content_____________
+2018-05-12 23:12:46 INFO  Start:36 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:12:46 INFO  Start:24 - Weight of gift: 325.0
+2018-05-12 23:12:46 INFO  Start:26 - 
+Sweet sugar filter with minimal 40.0 and maximum 50.0 values
+2018-05-12 23:12:46 INFO  Start:36 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:12:46 INFO  Start:36 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:23:40 DEBUG Start:15 - Application is running
+2018-05-12 23:23:40 DEBUG Start:42 - Shown gift with id = 0
+2018-05-12 23:23:40 INFO  Start:43 - Gift id: 0
+2018-05-12 23:23:40 INFO  Start:44 - ____________content_____________
+2018-05-12 23:23:40 INFO  Start:37 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:23:40 INFO  Start:25 - Weight of gift: 325.0
+2018-05-12 23:23:40 INFO  Start:27 - 
+Sweet sugar filter with minimal 40.0 and maximum 50.0 values
+2018-05-12 23:23:40 INFO  Start:37 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:23:40 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:24:42 DEBUG Start:15 - Application is running
+2018-05-12 23:24:42 DEBUG Start:42 - Shown gift with id = 0
+2018-05-12 23:24:42 INFO  Start:43 - Gift id: 0
+2018-05-12 23:24:42 INFO  Start:44 - ____________content_____________
+2018-05-12 23:24:42 INFO  Start:37 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:24:42 INFO  Start:25 - Weight of gift: 325.0
+2018-05-12 23:24:42 INFO  Start:27 - 
+Sweet sugar filter with minimal 40.0 and maximum 50.0 values
+2018-05-12 23:24:42 INFO  Start:37 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:24:42 INFO  Start:37 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:53:47 DEBUG Start:15 - Application is running
+2018-05-12 23:53:47 DEBUG GiftFileDAO:20 - Requested gift with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 1
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 1
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 1
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 1
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 2
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 2
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 1
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 1
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 0
+2018-05-12 23:53:47 DEBUG SweetFileDAO:25 - Requested sweet with id = 2
+2018-05-12 23:53:47 DEBUG SweetFileDAO:45 - Provided sweet with id = 2
+2018-05-12 23:53:47 DEBUG GiftFileDAO:41 - Provided gift with id = 0
+2018-05-12 23:53:47 DEBUG GiftService:45 - Sweets is sorted by sweet type
+2018-05-12 23:53:47 DEBUG Start:43 - Shown gift with id = 0
+2018-05-12 23:53:47 INFO  Start:44 - Gift id: 0
+2018-05-12 23:53:47 INFO  Start:45 - ____________content_____________
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 2
+2018-05-12 23:53:47 INFO  Start:38 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 2
+2018-05-12 23:53:47 INFO  Start:38 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-12 23:53:47 INFO  Start:38 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-12 23:53:47 INFO  Start:38 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-12 23:53:47 INFO  Start:38 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 1
+2018-05-12 23:53:47 INFO  Start:38 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 1
+2018-05-12 23:53:47 INFO  Start:38 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 1
+2018-05-12 23:53:47 INFO  Start:38 - id = 1
+weight = 35.0
+sugar = 30.0
+name = barbariska
+type = SWEETMEAT
+
+2018-05-12 23:53:47 DEBUG GiftService:62 - Gift weight is calculated
+2018-05-12 23:53:47 INFO  Start:25 - Weight of gift: 325.0
+2018-05-12 23:53:47 INFO  Start:27 - 
+Sweet sugar filter with minimal 40.0 and maximum 50.0 values
+2018-05-12 23:53:47 DEBUG GiftService:75 - Sweets of gift with id = com.epam.entity.Gift@bebdb06 are filtered by min sugar = 40.0 and max sugar = 50.0
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-12 23:53:47 INFO  Start:38 - id = 0
+weight = 40.0
+sugar = 50.0
+name = komunarka
+type = CHOCOLATE
+
+2018-05-12 23:53:47 DEBUG Start:37 - Shown sweet with id = 2
+2018-05-12 23:53:47 INFO  Start:38 - id = 2
+weight = 50.0
+sugar = 40.0
+name = krasa
+type = CANDY
+
