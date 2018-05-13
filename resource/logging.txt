@@ -1,0 +1,33 @@
+2018-05-13 21:44:57 DEBUG Start:15 - Application is running
+2018-05-13 21:44:57 DEBUG GiftFileDAO:19 - Requested gift with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 1
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 1
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 1
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 1
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 2
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 2
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 1
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 1
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 0
+2018-05-13 21:44:57 DEBUG SweetFileDAO:23 - Requested sweet with id = 2
+2018-05-13 21:44:57 DEBUG SweetFileDAO:43 - Provided sweet with id = 2
+2018-05-13 21:44:57 DEBUG GiftFileDAO:40 - Provided gift with id = 0
+2018-05-13 21:44:57 DEBUG GiftService:45 - Sweets is sorted by sweet type
+2018-05-13 21:44:57 DEBUG Start:43 - Shown gift with id = 0
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 2
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 2
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 0
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 1
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 1
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 1
+2018-05-13 21:44:57 DEBUG GiftService:62 - Gift weight is calculated
+2018-05-13 21:44:57 DEBUG GiftService:75 - Sweets of gift with id = com.epam.entity.Gift@736e9adb are filtered by min sugar = 40.0 and max sugar = 50.0
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 2
+2018-05-13 21:44:57 DEBUG Start:37 - Shown sweet with id = 0
