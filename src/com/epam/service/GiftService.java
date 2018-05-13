@@ -72,7 +72,7 @@ public class GiftService {
                 filteredSweets.add(sweet);
             }
         }
-        log.debug("Sweets of gift with id = " + gift +
+        log.debug("Sweets of gift with id = " + gift.getId() +
                 " are filtered by min sugar = " + min +
                 " and max sugar = " + max);
 
