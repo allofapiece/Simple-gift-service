@@ -1,5 +1,9 @@
 package com.epam.entity;
 
+/**
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class EdibleProduct extends Product {
     private float sugar;
     private String name;

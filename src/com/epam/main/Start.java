@@ -8,6 +8,14 @@ import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main class, where application starts.
+ * Also, this class contains standard methods for
+ * output information.
+ *
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class Start {
     final static Logger log = Logger.getLogger(Start.class);
 
@@ -20,18 +28,22 @@ public class Start {
         List<Sweet> filteredSweets = new ArrayList<>();
 
         Gift gift = giftService.find(0);
-        giftService.sort(gift, "sweetType"); //Gift sort
+        giftService.sort(gift, "sweetType");
         showGift(gift);
-        log.info("Weight of gift: " + giftService.calculateGiftWeight(gift)); //Gift weight calculating
+
+        log.info("Weight of gift: " + giftService.calculateGiftWeight(gift));
 
         log.info("\nSweet sugar filter with minimal "
                 + sugarMin + " and maximum "
                 + sugarMax + " values");
 
-        filteredSweets.addAll(giftService.sugarFilter(gift, sugarMin, sugarMax)); //Search with criteria
+        filteredSweets.addAll(giftService.sugarFilter(gift, sugarMin, sugarMax));
         showSweets(filteredSweets);
     }
 
+    /**
+     * @param sweets
+     */
     public static void showSweets(List<Sweet> sweets){
         for (Sweet sweet : sweets) {
             log.debug("Shown sweet with id = " + sweet.getId());
@@ -39,10 +51,14 @@ public class Start {
         }
     }
 
+    /**
+     * @param gift
+     */
     public static void showGift(Gift gift) {
         log.debug("Shown gift with id = " + gift.getId());
         log.info("Gift id: " + gift.getId());
         log.info("____________content_____________");
+
         showSweets(gift.getSweets());
     }
 }

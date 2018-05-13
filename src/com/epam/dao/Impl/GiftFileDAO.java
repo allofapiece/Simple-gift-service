@@ -11,9 +11,20 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Specific implementation of file dao for gift entity
+ *
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class GiftFileDAO implements FileDAO {
     private static final Logger log = Logger.getLogger(GiftFileDAO.class);
 
+    /**
+     * @param id
+     * @return Gift
+     * @throws EntityNotFoundException
+     */
     @Override
     public Gift find(int id) throws EntityNotFoundException {
         log.debug("Requested gift with id = " + id);

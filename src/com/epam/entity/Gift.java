@@ -3,9 +3,12 @@ package com.epam.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class Gift {
     private List<Sweet> sweets;
-
     private int id;
 
     public Gift() {

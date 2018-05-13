@@ -1,8 +1,11 @@
 package com.epam.entity;
 
+/**
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class Product {
     private int id;
-
     private float weight;
 
     public int getId() {

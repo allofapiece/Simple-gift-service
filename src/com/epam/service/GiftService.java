@@ -11,16 +11,27 @@ import org.apache.log4j.Logger;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class GiftService {
     private static final Logger log = Logger.getLogger(GiftService.class);
     private FileDAO<Gift> dao;
 
+    /**
+     * Connecting with dao dependencies
+     */
     public GiftService() {
         Factory<Factory> aFactory = new AbstractFactory();
         Factory<FileDAO> fileDAOFactory = aFactory.create("textFileDAO");
         this.dao = fileDAOFactory.create("gift");
     }
 
+    /**
+     * @param id
+     * @return Gift
+     */
     public Gift find(int id) {
         Gift gift = null;
 
@@ -33,6 +44,11 @@ public class GiftService {
         return gift;
     }
 
+    /**
+     * @param gift target sort
+     * @param sortType field sorted by
+     * @return Gift
+     */
     public Gift sort(Gift gift, String sortType) {
         switch (sortType) {
             case "name":
@@ -53,6 +69,10 @@ public class GiftService {
         return gift;
     }
 
+    /**
+     * @param gift
+     * @return float
+     */
     public float calculateGiftWeight(Gift gift) {
         float totalWeight = 0;
 
@@ -64,6 +84,12 @@ public class GiftService {
         return totalWeight;
     }
 
+    /**
+     * @param gift
+     * @param min
+     * @param max
+     * @return Set
+     */
     public Set<Sweet> sugarFilter(Gift gift, float min, float max){
         HashSet<Sweet> filteredSweets = new HashSet<>();
 

@@ -7,9 +7,17 @@ import org.apache.log4j.Logger;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ * @author Listratsenka Stanislau
+ * @version 1.0
+ */
 public class SweetFileReader {
     private static final Logger log = Logger.getLogger(SweetFileReader.class);
 
+    /**
+     * @param bufferedReader
+     * @return Sweet
+     */
     public Sweet readOne(BufferedReader bufferedReader) {
         Sweet sweet = new Sweet();
 
